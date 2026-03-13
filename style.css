@@ -1,0 +1,459 @@
+/* ===========================
+   BASE STYLES
+=========================== */
+html, body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+}
+
+body > section {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+#main-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  background-color: #212529;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link-custom {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link-custom {
+  color: #f8f9fa;
+  text-decoration: none;
+  font-weight: 500;       /* keep this fixed */
+  padding-bottom: 5px;
+  transition: color 0.3s ease, background-color 0.3s ease; /* smooth transition */
+}
+
+/* Hover/Active effect WITHOUT changing font-weight */
+.nav-link-custom:hover,
+.nav-link-custom.active {
+  color: #74c0fc;
+  /* font-weight removed */
+  text-decoration: underline; /* optional highlight effect */
+}
+
+/* NAV TOGGLE BUTTON */
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 10100;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: #212529;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    z-index: 10000;
+  }
+
+  .nav-menu.show-menu {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    padding: 10px 0;
+  }
+
+  .nav-menu a {
+    padding: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    z-index: 10001;
+  }
+}
+
+/* =========================
+   EXPANDED NAVBAR HEIGHT
+========================= */
+#main-navbar .nav-wrapper {
+    padding: 15px 0; /* increases vertical space */
+}
+
+#main-navbar .nav-left h4 {
+    line-height: 1.2; 
+}
+
+#main-navbar .nav-link-custom {
+    padding: 10px 15px; 
+    font-size: 1rem;   
+}
+
+.nav-toggle {
+    font-size: 30px; /* larger hamburger */
+    padding: 8px 12px; /* more clickable area */
+}
+
+/* ===========================
+   HIGHLIGHT
+=========================== */
+.highlight {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+/* ===========================
+   HOME SECTION
+=========================== */
+.home-section {
+  background-color: #2f2f2f;
+  min-height: 100vh;
+  padding: 80px 20px;
+  color: white;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+.section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-weight: bold;
+  border-left: 5px solid #BECF4F;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+/* ===========================
+   CARDS
+=========================== */
+.custom-card {
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ===========================
+   SKILL BADGES
+=========================== */
+.skill-badge {
+  margin: 5px 5px 5px 0;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   CERTIFICATES
+=========================== */
+.toggle-cert {
+  display: none;
+}
+
+.certificate-container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.certificate-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.iframe-wrapper {
+  height: 250px;
+  transition: height 0.5s ease;
+  pointer-events: none;
+}
+
+.toggle-cert:checked + .certificate-container .iframe-wrapper {
+  height: 600px;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.certificate-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/* ===========================
+   LOGO MEANING
+=========================== */
+.logo-meaning-section {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 4rem 0;
+}
+
+.logo-meaning-section h2 {
+  color: #ffc107;
+  font-weight: 700;
+}
+
+.logo-meaning-section p.lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.logo-meaning-section img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.3);
+}
+
+@media (max-width: 992px) {
+  .logo-meaning-section {
+    text-align: center;
+  }
+}
+
+/* ===========================
+   DOWNLOAD CARDS
+=========================== */
+.download-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.download-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.download-section h2 {
+  margin-bottom: 50px;
+}
+
+.download-section {
+  padding-top: 80px;
+}
+
+/* ===========================
+   PROTECTED IMAGE
+=========================== */
+.img-protect-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.img-protect-wrapper .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+  cursor: default;
+}
+
+.protected-img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* ===========================
+   VIDEO SECTIONS
+=========================== */
+.video-logo-section {
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.video-logo-section h2 {
+  margin-bottom: 2rem;
+}
+
+.video-logo, .logo-video {
+  max-width: 100%;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  display: block;
+}
+
+.video-protect-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.video-protect-wrapper .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: transparent;
+}
+
+/* ===========================
+   TOOLS
+=========================== */
+.tool-item {
+  width: 120px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tool-logo {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+.tool-item:hover .tool-logo {
+  transform: scale(1.15);
+  filter: grayscale(0%);
+}
+
+@media (max-width: 768px) {
+  .tool-logo { width: 55px; height: 55px; }
+}
+
+/* =========================
+   LOADER FIX - TEXT BELOW VIDEO
+=========================== */
+/* Fullscreen loader */
+.loader-wrapper {
+  position: fixed;       /* cover entire viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;      /* black background */
+  display: flex;
+  flex-direction: column; /* stack video + text vertically */
+  justify-content: center; /* vertical center */
+  align-items: center;    /* horizontal center */
+  gap: 20px;              /* space between video and text */
+  text-align: center;
+  z-index: 10001;          /* sit above everything */
+  opacity: 1;
+  transition: opacity 0.8s ease; /* smooth fade-out */
+}
+
+/* Centered pulsing circle video */
+.circle-container {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulseCircle 2s ease-in-out infinite;
+}
+
+.circle-loader {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.loader-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fade out effect */
+.loader-wrapper.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  animation: textFade 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseCircle {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+  50% { transform: scale(1.08); box-shadow: 0 0 30px 10px rgba(255,255,255,0.2); }
+}
+
+@keyframes textFade {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+/*=================
+  VIDEO LOGO CODE
+  ================*/
+/* wrapper para limit sa video */
+.video-wrapper {
+  max-width: 100px;  /* adjust kung gaano kalaki ang gusto mo */
+  margin: 0 auto;    /* center horizontally */
+}
+
+.video-logo {
+  width: 30%;      /* video mag-fit sa wrapper */
+  height: auto;     /* maintain aspect ratio */
+  display: block;
+}

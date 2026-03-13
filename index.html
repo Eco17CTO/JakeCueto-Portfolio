@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Jake Cueto Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- FULLSCREEN VIDEO LOADER -->
+<div class="loader-wrapper">
+  <div class="circle-container">
+    <div class="circle-loader">
+      <video class="loader-video" autoplay muted playsinline preload="auto" poster="logoPoster.png">
+        <source src="LogoLoadingSC.mp4" type="video/mp4">
+        <source src="LogoLoadingSC.webm" type="video/webm">
+        <source src="LogoLoadingSC.ogv" type="video/ogg">
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav id="main-navbar" class="bg-dark">
+  <div class="container">
+    <div class="nav-wrapper">
+
+      <!-- Logo + Name -->
+      <div class="nav-left d-flex align-items-center">
+        <img src="logo.png" alt="Logo" width="40" height="40" class="me-2">
+        <h4 class="text-white m-0 fw-bold">
+          Jak<span class="highlight">e</span> 
+          <span class="highlight">C</span>uet<span class="highlight">o</span>
+        </h4>
+      </div>
+
+      <!-- Mobile Hamburger -->
+      <button id="nav-toggle" class="nav-toggle">☰</button>
+
+      <!-- Nav Links -->
+      <div id="nav-menu" class="nav-menu">
+        <a href="index.html" class="nav-link-custom active">Home</a>
+        <a href="experience.html" class="nav-link-custom">Experience</a>
+        <a href="certificate.html" class="nav-link-custom">Certificates</a>
+        <a href="about.html" class="nav-link-custom">About</a>
+        <a href="others.html" class="nav-link-custom">Other</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME SECTION -->
+<section class="home-section d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-12 col-lg-6 text-white">
+        <h1 class="text-left mb-5 fw-bold display-5">Career Objective</h1>
+        <p class="lead">
+          A Bachelor’s Degree graduate in Information Systems with solid experience as a Technical Support and Technical Specialist, providing reliable technical assistance, troubleshooting hardware and software issues, and delivering effective IT solutions to end users. Experienced in diagnosing system, network, and application-related concerns while maintaining high standards of customer service and operational efficiency.
+
+          Equipped with strong analytical skills, technical knowledge, and a commitment to continuous improvement, I aim to contribute my expertise to an organization where I can support business objectives through technology-driven solutions, enhance user experience, and further develop my professional competencies in the IT industry.
+        </p>
+      </div>
+
+      <div class="col-12 col-lg-6 text-center mt-4 mt-lg-0">
+        <div class="img-protect-wrapper position-relative d-inline-block">
+          <img src="profile.jpg" class="img-fluid rounded shadow protected-img" alt="Profile Picture">
+          <div class="overlay"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- LOGO MEANING SECTION -->
+<section class="logo-meaning-section d-flex align-items-center py-5 bg-secondary text-white">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <div class="col-12 col-lg-6 text-center mb-4 mb-lg-0">
+        <div class="video-protect-wrapper position-relative d-inline-block">
+          <video class="logo-video img-fluid" autoplay loop muted playsinline controlslist="nodownload" disablePictureInPicture>
+            <source src="logo-video.mp4" type="video/mp4">
+            <source src="logo-video.webm" type="video/webm">
+            <source src="logo-video.ogv" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <div class="overlay"></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <h2 class="fw-bold mb-3">Logo Significance</h2>
+        <p class="lead">
+          This logo is more than just a design, it represents who I am both personally and professionally. The letters come from my own name, with “E” from Jake and “C" &" O” from Cueto, but they also carry a deeper meaning. The “E” stands for the Essence of Christ, reminding me to live a life centered on faith. The “C” represents Compassion, inspiring me to show kindness and care to others. The “O” symbolizes Obedience and Outreach, guiding me to follow God’s will and serve those around me.
+
+          In my professional journey, “Eco” reflects the values I bring to my work: integrity, empathy, and purpose-driven action. Just as my logo represents a faith-centered life, it also serves as a reminder to approach my career with dedication, compassion, and a commitment to make a positive impact in every project and team I am part of.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS SECTION -->
+<section class="tools-section py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-4">Technical Expertise</h2>
+    <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+
+      <!-- TOOL ITEMS -->
+      <div class="tool-item">
+        <img src="html5pic.png" alt="HTML" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">HTML5</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="csspiclogo.png" alt="CSS" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">CSS</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="bootstraopic.png" alt="Bootstrap" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">Bootstrap</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="pythonlogopic.png" alt="Python" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">Python</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="javascriptpic.png" alt="JavaScript" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">JavaScript</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="reactjspic.png" alt="ReactJS" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">ReactJS</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="adobexdlogo.png" alt="Adobe XD" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">Adobe XD</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="figmapic.png" alt="Figma" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">Figma</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="framerpic.png" alt="Framer" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">Framer</p>
+      </div>
+
+      <div class="tool-item">
+        <img src="visualstudiopic.png" alt="VS Code" class="img-fluid tool-logo">
+        <p class="mt-2 fw-semibold">Visual Studio Code</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center py-3">
+  <div class="container">
+    <small>© 2026 Jake Cueto. All Rights Reserved.</small>
+  </div>
+</footer>
+
+<script src="script1.js"></script>
+</body>
+</html>
